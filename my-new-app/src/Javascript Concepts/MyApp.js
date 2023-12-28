@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 export const MyApp = () => {
-    console.log("Hello");
-    console.log("Hello 2");
+  const [first, setfirst] = useState();
+  const [data,setData]= useState("");
+  const handleClick=()=>
+  {
+    alert("Hello Hello")
+  }
+  useEffect(() => {
+      console.log("Hello");
+      console.log(data);
+    },[data])
+    
   return (
-    <div>Hello From My JS App </div>
+    <div>
+      <button onClick={handleClick}>Hello Counter</button>
+       </div>
   )
 }
